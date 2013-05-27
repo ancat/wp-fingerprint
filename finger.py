@@ -35,7 +35,7 @@ if not args.mode or args.mode != "active":
 if args.mode == "active" and not args.list:
     print "You need to supply a list of plugins to check for before using this mode."
     sys.exit()
-else:
+elif args.mode == "active" and args.list:
     args.list = json.loads(open(args.list).read())
 
 if not args.threads:
