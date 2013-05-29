@@ -26,7 +26,8 @@ codecolorer [0.9.9]
 
 Active scanning works by taking a list of known plugins, and checking if the directories exist in the blog. This type of scan can be really noisy, which is why it's better to use targeted lists or 
 lists of known bad plugins. There is a list included. Once plugins have been identified, you can search for known exploits, or audit them yourselves (most of the time they're pretty shitty). This 
-mode is threaded so it's super fast.
+mode is threaded so it's super fast. This is particularly useful when scanning for plugins that may not have any publicly linked resources but are still vulnerable (for example, if you know the 
+direct path to a vulnerable page) or may affect administrators only, etc.
 
 ```
 $ python finger.py --mode active --host blog --path / --list lists/known_bad.txt --threads 5
